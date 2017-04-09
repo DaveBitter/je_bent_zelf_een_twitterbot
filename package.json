@@ -1,0 +1,25 @@
+{
+  "name": "je_bent_zelf_een_twitterbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveBitter/je_bent_zelf_een_twitterbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveBitter/je_bent_zelf_een_twitterbot/issues"
+  },
+  "homepage": "https://github.com/DaveBitter/je_bent_zelf_een_twitterbot#readme",
+  "dependencies": {
+    "twit": "^2.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
