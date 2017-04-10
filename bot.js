@@ -12,9 +12,18 @@ stream.on('tweet', tweetEvent);
 
 function tweetEvent(tweet) {
 	var username = "@" + tweet.user.screen_name;
+	var reply;
+
+	var count = (temp.match(/@je_bent_zelf/g) || []).length;
+	if (count == 1) {
+		reply = username + ' Je bent zelf een' + tweet.text.replace("@je_bent_zelf", "") + '!'
+	} else if (count > 1) {
+		reply = username + ' Je bent zelf een poging tot een oneindige loop!'
+	} else {
+		reply = username + ' @DVYBTTR heeft me nog niet goed genoeg geprogrammeerd :('
+	}
 
 	var nameID = tweet.id_str;
-	var reply = username + ' Je bent zelf een' + tweet.text.replace("@je_bent_zelf", "") + '!'
 
 	var params = {
 		status: reply,
