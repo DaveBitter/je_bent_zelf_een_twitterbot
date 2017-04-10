@@ -1,4 +1,4 @@
-console.log('The message bot is starting');
+console.log('The message bot is starting up!');
 
 var Twit = require('twit');
 
@@ -14,7 +14,8 @@ function tweetEvent(tweet) {
 	var username = "@" + tweet.user.screen_name;
 	var reply;
 
-	var count = (temp.match(/@je_bent_zelf/g) || []).length;
+	var count = (tweet.text.match(/@je_bent_zelf/g) || []).length;
+
 	if (count == 1) {
 		reply = username + ' Je bent zelf een' + tweet.text.replace("@je_bent_zelf", "") + '!'
 	} else if (count > 1) {
